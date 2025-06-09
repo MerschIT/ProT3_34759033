@@ -1,0 +1,199 @@
+/*
+body {  
+    background-color: #eaf2e3;  
+    color: #333;  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    }
+
+    .clase1 {
+        text-align: center;
+    font-weight: bold; 
+    font-style: italic;
+    }
+
+    .clase2 {
+        color: blue;
+        text-align: center;     
+    font-weight: bold;
+    font-style: italic;
+    }
+*/
+
+body {
+  background-color: #f2854b !important;
+}
+
+header {  
+background-color: #f2854b !important;  
+color: #fff;  
+text-align: center;  
+padding: 20px;  
+}  
+section {  
+padding: 20px; /* espaciado para la sección de 20 pixeles */}  
+footer {  
+background-color: #c72213 !important; /* Color de fondo del footer */  
+color: #fff;  
+padding: 20px 0; }  
+.footer-content {  
+max-width: 800px; /* Ancho máximo del contenido del footer */  
+margin: 0 auto; /* Centrar el contenido del footer horizontalmente */  
+text-align: center; }  
+
+/* Estilos para el nav y enlaces de ul y li */  
+nav {  
+background-color: #FFA07A;  
+padding: 10px;  
+}  
+nav ul {  
+list-style: none;  
+margin: 0;  
+padding: 0;  
+text-align: center;  
+}  
+nav ul li {  
+display: inline-block;  
+margin-right: 20px;  
+}  
+nav ul li a {  
+color: #fff;  
+text-decoration: none;  
+padding: 8px 16px;  
+border-radius: 5px;  
+}  
+nav ul li a:hover {  
+background-color: #FFA07A;  
+} 
+
+.mi-navbar-bg{
+    background-color: #fffaf4 !important;
+}
+
+img {  
+display: block; /* Para eliminar el espacio adicional que algunos navegadores agregan a las img. */  
+margin: 0 auto; /* Centrar las imágenes horizontalmente */  
+max-width: 100%; /* Asegurar que las imágenes no excedan el ancho del contenedor */  
+/*border: 3px solid #69bd45;  Contorno de 3px con un color verde (#69bd45) alrededor de la img.*/
+border-radius: 10px; /* Borde redondeado de 10px para suavizar el contorno */  
+}  
+
+.img-banner{
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Mantiene la relación de aspecto */
+}
+
+.logo {
+    width: 20px; 
+    height: 20px;
+    margin-right: 5px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+   
+}
+
+.link:hover {
+    
+    color: #fbffc9;
+}
+
+.logo-contenedor{
+    background-color: #8d190e;
+    
+}
+
+.logo-footer{
+    height: 100%;
+    width: auto;
+    max-height: 50px; /* Para evitar que se desborde */
+    display: block;
+}
+
+.logo-footer:hover {
+    transform: scale(1.15); /* Aumenta el tamaño un 20% */
+}
+
+.carrousel-borde{
+    border-radius: 0%;
+}
+
+.login{
+    background-color: #763602 !important;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.mas-pedidos{
+    background-color: #c72213;
+    color: #fff;
+    padding: 10px 0;    
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 4px #00000080;
+}
+
+.modal-body {
+    word-break: break-word;
+    white-space: normal;
+}
+
+.container-quienes-somos {
+            max-width: au;
+            margin: 40px auto;
+           
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
+
+.h1-qs {
+            text-align: center;
+            color: #b22222;
+            font-size: 5em;
+        }
+
+.p-qs {
+            font-size: 2em;
+            line-height: 1.7;
+            text-align: justify;
+           
+        }
+
+.equipo-img {
+            display: block;
+            margin: 30px auto;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .informacion-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .font-search {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2em;
+            color: #d8d8d8;
+            
+        }
+        .font-search::placeholder {
+    color: #bbb;      /* Un gris claro, puedes ajustar el color */
+    opacity: 1;       /* Asegura que el color se aplique completamente */
+}
