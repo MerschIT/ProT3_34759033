@@ -12,6 +12,18 @@ class usuario_controller extends Controller{
 
     public function create()
     {
+        $data['titulo'] = 'Registro';
+        echo view('front/head_view', $data);
+        echo view('front/navbar_view');         
+        echo view('back/usuario/register');
+    }	echo view('front/footer_view');
+    
+
+
+    /* CODIGO VIEJO, SE CAMBIA POR LO QUE DICE EN EL VIDEO
+
+    public function create()
+    {
         return
         $data['titulo'] = 'Registro';
         view('front/head_view', $data);
@@ -33,3 +45,6 @@ class usuario_controller extends Controller{
             'usuario' => $this->request->getPost('usuario'),
             'email' => $this->request->getPost('email'),
             'pass' => password_hash($this->request->getPost('pass'), PASSWORD
+
+            */
+            

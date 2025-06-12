@@ -15,43 +15,44 @@ class Home extends BaseController
         view('front/footer_view');
 }
 
-public function login()
-{
-    $data['titulo'] = 'Mersch - Login';
-    return 
-        view('front/head_view', $data) .
-        view('front/navbar_view') .
-        view('front/login') .
-        view('front/footer_view');
-}
-
 public function quienes_somos()
 {
     $data['titulo'] = 'Mersch - Quienes somos';
-    return 
-        view('front/head_view', $data) .
-        view('front/navbar_view') .
-        view('front/quienes_somos') .
-        view('front/footer_view');
+    
+        echo view('front/head_view', $data);
+        echo view('front/navbar_view');
+        echo view('front/quienes_somos');
+        echo view('front/footer_view');
 }
 
 public function acerca_de()
 {
     $data['titulo'] = 'Mersch - Acerca de';
-    return 
-        view('front/head_view', $data) .
-        view('front/navbar_view') .
-        view('front/acerca_de') .
-        view('front/footer_view');
+    
+        echo view('front/head_view', $data) ;
+        echo view('front/navbar_view') ;
+        echo view('front/acerca_de') ;
+        echo view('front/footer_view');
 }
 
 public function register()
 {
     $data['titulo'] = 'Mersch - Registro';
-    return 
-        view('front/head_view', $data) .
-        view('front/navbar_view') .
-        view('front/register') .
-        view('front/footer_view');
+    
+        echo view('front/head_view', $data) ;
+        echo view('front/navbar_view') ;
+        echo view('back/usuario/register');
+        echo view('front/footer_view');
 }
+
+public function login()
+{
+    $data['titulo'] = 'Mersch - Login';
+     
+       echo view('front/head_view', $data);
+       echo view('front/navbar_view');
+       echo view('front/login');
+       echo view('front/footer_view');
+}
+
 }
