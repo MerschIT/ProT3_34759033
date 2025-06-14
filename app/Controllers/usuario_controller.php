@@ -26,7 +26,7 @@ public function formValidation(){
         'usuario' => 'required|min_length[3]|max_length[25]',
         'email' => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
         'pass' => 'required|min_length[3]|max_length[10]',
-    ]
+    ],
 
 );
 $formModel = new usuario_model();
@@ -42,7 +42,13 @@ if (!$input) {
         'apellido' => $this->request->getVar('apellido'),
         'usuario' => $this->request->getVar('usuario'),
         'email' => $this->request->getVar('email'),
-        'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)]);
+        'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
+    ]);
+
+    session()->setFlashdata('success', 'Usuario registrado con exito');
+    return $this->response->redirect('/login');
+}
+}
 }
 
     /* CODIGO VIEJO, SE CAMBIA POR LO QUE DICE EN EL VIDEO

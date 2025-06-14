@@ -5,6 +5,14 @@
     <form class="login">
 
     <span class="fs-3  ">CONECTARSE</span>
+
+  <!-- Mensaje de error -->
+   <?php if(session()->getFlashdata('msg')): ?>
+      <div class="alert alert-warning">
+        <?= session()->getFlashdata('msg')?>
+      </div>
+  <?php endif; ?>
+
   <div class="row mb-3 mt-4">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
