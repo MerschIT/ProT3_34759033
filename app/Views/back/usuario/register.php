@@ -8,7 +8,7 @@
 
 <?php $validation = \Config\Services::validation(); ?>
  <form method="post" action="<?php echo base_url('/enviar-form') ?>" >
-    <?php $csrf_field(); ?>
+     <?php csrf_field(); ?> 
 
     <?php if(!empty(session()->getFlashdata('fail'))): ?>
       <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>

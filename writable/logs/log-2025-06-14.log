@@ -93,3 +93,73 @@ in APPPATH\Views\back\usuario\register.php on line 13.
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-14 22:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-14 22:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-14 22:33:59 --> ErrorException: Undefined variable $csrf_field
+[Method: GET, Route: register]
+in APPPATH\Views\back\usuario\register.php on line 11.
+ 1 APPPATH\Views\back\usuario\register.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $csrf_field', 'C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/register', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('back/usuario/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-14 22:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-14 22:34:13 --> ErrorException: Undefined variable $csrf_field
+[Method: GET, Route: register]
+in APPPATH\Views\back\usuario\register.php on line 11.
+ 1 APPPATH\Views\back\usuario\register.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $csrf_field', 'C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/register', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('back/usuario/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-14 22:34:29 --> ErrorException: Undefined variable $csrf_field
+[Method: GET, Route: register]
+in APPPATH\Views\back\usuario\register.php on line 11.
+ 1 APPPATH\Views\back\usuario\register.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $csrf_field', 'C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/register', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('back/usuario/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-14 22:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-14 22:49:09 --> ErrorException: Undefined variable $csrf_field
+[Method: GET, Route: register]
+in APPPATH\Views\back\usuario\register.php on line 11.
+ 1 APPPATH\Views\back\usuario\register.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $csrf_field', 'C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ProT3_34759033\\app\\Views\\back\\usuario\\register.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/register', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('back/usuario/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

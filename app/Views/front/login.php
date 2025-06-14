@@ -38,6 +38,8 @@
   </div>
   <button type="submit" class="btn btn-primary">Ingresar</button>
   <a href="<?= base_url('/') ?>" class="btn btn-danger">Cancelar</a>
+
+  <p class="mt-3">¿No tienes cuenta? <a href="<?= base_url('/register') ?>">Regístrate aquí</a></p>
 </form>
 
 </div>
