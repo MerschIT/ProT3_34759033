@@ -2,7 +2,8 @@
 <!-- FORMULARIO HORIZONTAL DE BOOTSTRAP -->
 
 <div class="container w-75 h-auto mt-4 mb-4 bg-white p-4 rounded shadow" >
-    <form class="login">
+
+<form class="login">
 
     <span class="fs-3  ">CONECTARSE</span>
 
@@ -13,6 +14,20 @@
       </div>
   <?php endif; ?>
 
+  <!-- Inicio del formulario de login -->
+   <form method="post" action="<?= base_url('/enviarlogin') ?>">
+      
+   <?php if(session()->getFlashdata('success')): ?>
+      <div class="alert alert-success">
+        <?= session()->getFlashdata('success')?>
+      </div>
+<?php endif; ?>
+
+   <?php if(session()->getFlashdata('fail')): ?>
+      <div class="alert alert-danger">
+        <?= session()->getFlashdata('fail')?>
+      </div>
+   <?php endif; ?>
   <div class="row mb-3 mt-4">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
@@ -40,6 +55,7 @@
   <a href="<?= base_url('/') ?>" class="btn btn-danger">Cancelar</a>
 
   <p class="mt-3">¿No tienes cuenta? <a href="<?= base_url('/register') ?>">Regístrate aquí</a></p>
+   
 </form>
 
 </div>
