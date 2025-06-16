@@ -2,12 +2,12 @@
 <!-- FORMULARIO HORIZONTAL DE BOOTSTRAP -->
 
 <div class="container w-75 h-auto mt-4 mb-4 bg-white p-4 rounded shadow" >
-    <form class="login">
+    
 
      <span class="fs-3  ">REGISTRARSE</span>
 
 <?php $validation = \Config\Services::validation(); ?>
- <form method="post" action="<?php echo base_url('/enviar-form') ?>" >
+ <form method="post" action="<?= base_url('/enviar-form') ?>" >
      <?php csrf_field(); ?> 
 
     <?php if(!empty(session()->getFlashdata('fail'))): ?>

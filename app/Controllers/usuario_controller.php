@@ -16,7 +16,8 @@ class usuario_controller extends Controller{
         echo view('front/head_view', $data);
         echo view('front/navbar_view');         
         echo view('back/usuario/register');
-    }	echo view('front/footer_view');
+    	echo view('front/footer_view');
+    }
     
 public function formValidation(){
 
@@ -46,7 +47,7 @@ if (!$input) {
     ]);
 
     session()->setFlashdata('success', 'Usuario registrado con exito');
-    return $this->response->redirect('/login');
+    return $this->response->redirect('/login', 'Home::login');
 }
 }
 }
