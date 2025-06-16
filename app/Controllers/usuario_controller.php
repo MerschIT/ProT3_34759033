@@ -47,7 +47,7 @@ if (!$input) {
     ]);
 
     session()->setFlashdata('success', 'Usuario registrado con exito');
-    return $this->response->redirect('/login', 'Home::login');
+    return redirect()->to(base_url('login'));
 }
 }
 }
