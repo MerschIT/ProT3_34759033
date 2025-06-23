@@ -14,7 +14,7 @@
     <?php endif; ?>
 
     <!-- Inicio del formulario de login -->
-    <form method="post" action="<?= base_url('/enviarlogin') ?>">
+    <form method="post" action="<?php echo base_url('/enviarlogin') ?>">
 
       <?php if (session()->getFlashdata('success')): ?>
         <div class="alert alert-success">
