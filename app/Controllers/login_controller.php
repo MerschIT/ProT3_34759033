@@ -8,9 +8,9 @@ class login_controller extends BaseController
 {
     public function index()
     {
-        helper('form', 'url');
+        helper(['form', 'url']);
 
-        $data['titulo'] = 'Login';
+        $data['titulo'] = 'Login controller';
         echo view('front/head_view', $data);
         echo view('front/navbar_view');
         echo view('back/usuario/login');
@@ -56,7 +56,7 @@ class login_controller extends BaseController
                 return redirect()->to('/login_controller');
             }
         } else {
-            $session->setFlashdata('msg', 'Email no existe o password incorrecto');
+            $session->setFlashdata('msg', 'Email no existe o es incorrecto');
             return redirect()->to('/login_controller');
         }
     }
