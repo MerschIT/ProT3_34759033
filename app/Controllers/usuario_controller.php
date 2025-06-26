@@ -58,11 +58,39 @@ class usuario_controller extends Controller
     }
 
     /*Funcion para borrar un usuario*/
-    public function borrarUsuario($id)
+    public function borrar($id)
     {
         $usuarioModel = new \App\Models\usuario_model();
         $usuarioModel->delete($id);
         session()->setFlashdata('msg', 'Usuario borrado correctamente');
-        return redirect()->to('/usuarios'); // Cambia '/usuarios' por la página que quieras mostrar después
+        return redirect()->to('/');
+    }
+
+
+    /* FUNCION PARA EDITAR UN USUARIO */
+    public function editar($id)
+    {
+        $usuarioModel = new \App\Models\usuario_model();
+
+        if ($this->request->getMethod() === 'post') {
+            $nuevoNombre = $this->request->getPost('nombre');
+            echo "Voy a actualizar el nombre a: " . $nuevoNombre;
+            exit; // Descomenta para probar
+            $usuarioModel->update($id, ['nombre' => $nuevoNombre]);
+            session()->setFlashdata('msg', 'Nombre actualizado correctamente');
+            return redirect()->to('/administrar');
+        }
+
+        $usuario = $usuarioModel->find($id);
+        if (!$usuario) {
+            session()->setFlashdata('msg', 'Usuario no encontrado');
+            return redirect()->to('/administrar');
+        }
+
+        $data['titulo'] = 'Editar Usuario';
+        echo view('front/head_view', $data);
+        echo view('front/navbar_view');
+        echo view('back/usuario/editar_usuario', ['usuario' => $usuario]);
+        echo view('front/footer_view');
     }
 }

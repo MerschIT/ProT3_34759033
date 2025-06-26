@@ -14,7 +14,7 @@
                 <script>
                     setTimeout(function() {
                         window.location.href = "<?= base_url('/') ?>";
-                    }, 3200); // 3000 ms = 3 segundos
+                    }, 3200); // 3200 ms = 3.2 segundos
                 </script>
             <?php elseif (session()->perfil_id == 2): ?>
                 <div>
@@ -23,7 +23,7 @@
                 <script>
                     setTimeout(function() {
                         window.location.href = "<?= base_url('/') ?>";
-                    }, 5000); // 3000 ms = 3 segundos
+                    }, 3200);
                 </script>
 
 

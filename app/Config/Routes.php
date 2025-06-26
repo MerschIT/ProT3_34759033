@@ -25,4 +25,6 @@ $routes->get('/logout', 'login_controller::logout');
 
 /* Rutas del panel de control */
 $routes->get('/borrar-usuario/(:num)', 'usuario_controller::borrar/$1');
+$routes->get('/editar-usuario/(:num)', 'usuario_controller::editar/$1');
+$routes->post('/editar-usuario/(:num)', 'usuario_controller::editar/$1');
 $routes->get('/administrar', 'Home::panel_control', ['filter' => 'auth']);

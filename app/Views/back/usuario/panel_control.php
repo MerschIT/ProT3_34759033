@@ -12,7 +12,7 @@
             <input type="number" class="form-control" id="userId" name="user_id" placeholder="ID de usuario" required>
         </div>
         <div class="col-auto">
-            <!-- Botón Editar (puedes enlazarlo a tu función de editar) -->
+            <!-- Botón Editar -->
             <a href="#" id="editBtn" class="btn btn-primary"
                 onclick="editarUsuario(); return false;">Editar usuario</a>
         </div>
