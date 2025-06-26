@@ -25,14 +25,16 @@ class login_controller extends BaseController
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('pass');
 
+
+
         $log_data = $model->where('email', $email)->first();
 
         if ($log_data) {
             $pass = $log_data['pass'];
             $ba = $log_data['baja'];
-            if ($ba = 'SI') {
+            if ($ba == 'SI') {
                 $session->setFlashdata('msg', 'Usuario dado de baja');
-                return redirect()->to('/login_controller');
+                return redirect()->to('/login');
             }
 
             $verify_pass = password_verify($password, $pass);
@@ -48,16 +50,16 @@ class login_controller extends BaseController
                     'logged_in' => TRUE
                 ];
                 $session->set($ses_data);
-                session()->setFlashdata('msg', 'Bienvenido!!');
+                session()->setFlashdata('msg', 'Bienvenido, serás redirigido a la página principal');
 
                 return redirect()->to('/panel');
             } else {
                 $session->setFlashdata('msg', 'Contraseña incorrecta');
-                return redirect()->to('/login_controller');
+                return redirect()->to('/login');
             }
         } else {
             $session->setFlashdata('msg', 'Email no existe o es incorrecto');
-            return redirect()->to('/login_controller');
+            return redirect()->to('/login');
         }
     }
 
