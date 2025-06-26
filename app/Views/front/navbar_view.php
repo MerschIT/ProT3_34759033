@@ -68,6 +68,9 @@ $perfil = $session->get('perfil_id');
               <li class="nav-item">
                 <a class="nav-link active fs-4" href="<?= base_url('/') ?>">Principal</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/administrar') ?>">Administrar usuarios</a>
+              </li>
         </div>
       <?php endif; ?>
 
