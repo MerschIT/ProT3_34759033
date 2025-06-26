@@ -2,7 +2,7 @@
     <p>ID: <?= $usuario['id_usuario'] ?></p>
     <!-- BORRAR DESPUES LO DE ARRIBA -->
     <h2>Editar Nombre de Usuario</h2>
-    <form method="post" action="<?= base_url('/editar-usuario/' . $usuario['id_usuario']) ?>">
+    <form method="POST" action="<?= base_url('/editar-usuario/' . $usuario['id_usuario']) ?>">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nuevo nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" value="<?= esc($usuario['nombre']) ?>" required>

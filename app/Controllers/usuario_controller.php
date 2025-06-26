@@ -70,12 +70,14 @@ class usuario_controller extends Controller
     /* FUNCION PARA EDITAR UN USUARIO */
     public function editar($id)
     {
+
         $usuarioModel = new \App\Models\usuario_model();
 
-        if ($this->request->getMethod() === 'post') {
+        file_put_contents('C:/xampp/htdocs/ProT3_34759033/debug.txt', "ID recibido: $id\n", FILE_APPEND);
+
+
+        if ($this->request->getMethod() === 'POST') {
             $nuevoNombre = $this->request->getPost('nombre');
-            echo "Voy a actualizar el nombre a: " . $nuevoNombre;
-            exit; // Descomenta para probar
             $usuarioModel->update($id, ['nombre' => $nuevoNombre]);
             session()->setFlashdata('msg', 'Nombre actualizado correctamente');
             return redirect()->to('/administrar');
