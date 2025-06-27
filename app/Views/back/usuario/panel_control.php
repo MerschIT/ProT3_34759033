@@ -35,6 +35,7 @@
                     <th>Usuario</th>
                     <th>Email</th>
                     <th>Perfil</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +48,13 @@
                             <td><?= esc($u['usuario']) ?></td>
                             <td><?= esc($u['email']) ?></td>
                             <td><?= esc($u['perfil_id']) ?></td>
+                            <td>
+                                <a href="<?= base_url('/borrar-usuario/' . $u['id_usuario']) ?>"
+                                    class="btn btn-danger btn-sm"
+                                    title="Borrar Usuario"
+                                    onclick="return confirm('¿Seguro que quieres borrar el usuario: <?= esc($u['nombre']) ?>?');">
+                                    <i class="bi bi-x-lg">Borrar</i>
+                                </a>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>

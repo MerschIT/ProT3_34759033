@@ -51,88 +51,88 @@ $perfil = $session->get('perfil_id');
     </button>
 
     <!-- PERFILES DE SESION ** falta codigo, se prueba primero que diga ADMIN -->
-    <div class="mx-auto" style="width: 60%;">
+    <div class="mx-auto" style="width: 90%;">
       <!-- PERFIL ADMINISTRADOR -->
       <?php if (session()->perfil_id == 1): ?>
 
         <div class="btn btn-secondary active btnUser btn-sm">
-          <a href="">ADMIN: <?php echo session('nombre'); ?></a>
+          <a href="<?= base_url('/administrar') ?>" class="text-white text-decoration-none">ADMIN: <?php echo session('nombre'); ?></a>
+        </div>
 
 
+        <!-- BOTON DE CERRAR SESION -->
+        <?php if (session()->get('logged_in')): ?>
+          <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm ms-2">Cerrar sesión</a>
 
-          <!-- BOTON DE CERRAR SESION -->
-          <?php if (session()->get('logged_in')): ?>
-            <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm ms-2">Cerrar sesión</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fs-4" href="<?= base_url('/') ?>">Principal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-4" href="<?= base_url('/administrar') ?>">Administrar usuarios</a>
+            </li>
+
+          <?php endif; ?>
+
+          <!-- PERFIL CLIENTE ** FALTA CODIGO. SOLO SE PRUEBA QUE DIGA CLIENTE -->
+        <?php elseif (session()->perfil_id == 2): ?>
+          <div class="btn btn-info active btnUser btn-sm">
+            <a href="">CLIENTE: <?php echo session('nombre'); ?></a>
+
+
+            <!-- BOTON DE CERRAR SESION -->
+            <?php if (session()->get('logged_in')): ?>
+              <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm ms-2">Cerrar sesión</a>
+            <?php endif; ?>
+
+            <!-- NAVBAR DE CLIENTE -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/') ?>">Principal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/quienes_somos') ?>">Quienes somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/acerca_de') ?>">Acerca de</a>
+              </li>
+
+
+            </ul>
+          </div>
+
+          <!-- PERFIL NO LOGUEADO ** FALTA CODIGO. SOLO SE PRUEBA QUE DIGA NO LOGUEADO -->
+        <?php else: ?>
+          <div class="btn btn-secondary active btnUser btn-sm">
+            <a href="<?= base_url('/login') ?>" class="text-white text-decoration-none">USUARIO NO CONECTADO</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active fs-4" href="<?= base_url('/') ?>">Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active fs-4" href="<?= base_url('/administrar') ?>">Administrar usuarios</a>
+                <a class="nav-link active fs-4" href="<?= base_url('/quienes_somos') ?>">Quienes somos</a>
               </li>
-        </div>
-      <?php endif; ?>
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/acerca_de') ?>">Acerca de</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/register') ?>">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-4" href="<?= base_url('/login') ?>">Login</a>
+              </li>
 
-      <!-- PERFIL CLIENTE ** FALTA CODIGO. SOLO SE PRUEBA QUE DIGA CLIENTE -->
-    <?php elseif (session()->perfil_id == 2): ?>
-      <div class="btn btn-info active btnUser btn-sm">
-        <a href="">CLIENTE: <?php echo session('nombre'); ?></a>
-
-
-        <!-- BOTON DE CERRAR SESION -->
-        <?php if (session()->get('logged_in')): ?>
-          <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm ms-2">Cerrar sesión</a>
-        <?php endif; ?>
-
-        <!-- NAVBAR DE CLIENTE -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/') ?>">Principal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/quienes_somos') ?>">Quienes somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/acerca_de') ?>">Acerca de</a>
-          </li>
-
-
-        </ul>
-      </div>
-
-      <!-- PERFIL NO LOGUEADO ** FALTA CODIGO. SOLO SE PRUEBA QUE DIGA NO LOGUEADO -->
-    <?php else: ?>
-      <div class="btn btn-info active btnUser btn-sm">
-        <a href="">NO LOGUEADO </a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/') ?>">Principal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/quienes_somos') ?>">Quienes somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/acerca_de') ?>">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/register') ?>">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fs-4" href="<?= base_url('/login') ?>">Login</a>
-          </li>
-
-        </ul>
-        <form class="d-flex pt-2" role="search">
-          <input class="form-control me-2 font-search" type="search" placeholder="¿Qué buscas?" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-      <?php endif; ?>
-      </div>
+            </ul>
+            <form class="d-flex pt-2" role="search">
+              <input class="form-control me-2 font-search" type="search" placeholder="¿Qué buscas?" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          <?php endif; ?>
+          </div>
     </div>
   </div>
 </nav>
