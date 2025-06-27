@@ -22,6 +22,41 @@
                 onclick="borrarUsuario(); return false;">Borrar usuario</a>
         </div>
     </form>
+
+    <!-- Tabla de usuarios -->
+    <div class="mt-5">
+        <h3>Lista de Usuarios</h3>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Usuario</th>
+                    <th>Email</th>
+                    <th>Perfil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (!empty($usuarios)): ?>
+                    <?php foreach ($usuarios as $u): ?>
+                        <tr>
+                            <td><?= esc($u['id_usuario']) ?></td>
+                            <td><?= esc($u['nombre']) ?></td>
+                            <td><?= esc($u['apellido']) ?></td>
+                            <td><?= esc($u['usuario']) ?></td>
+                            <td><?= esc($u['email']) ?></td>
+                            <td><?= esc($u['perfil_id']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="6">No hay usuarios registrados.</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script>

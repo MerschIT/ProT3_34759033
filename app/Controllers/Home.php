@@ -59,9 +59,13 @@ class Home extends BaseController
     {
         $data['titulo'] = 'Mersch - Panel de Control';
 
+        $usuarioModel = new \App\Models\usuario_model();
+        $usuarios = $usuarioModel->findAll();
+        $data['usuarios'] = $usuarios;
+
         echo view('front/head_view', $data);
         echo view('front/navbar_view');
-        echo view('back/usuario/panel_control');
+        echo view('back/usuario/panel_control', $data);
         echo view('front/footer_view');
     }
 }

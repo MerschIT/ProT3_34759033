@@ -73,8 +73,6 @@ class usuario_controller extends Controller
 
         $usuarioModel = new \App\Models\usuario_model();
 
-        file_put_contents('C:/xampp/htdocs/ProT3_34759033/debug.txt', "ID recibido: $id\n", FILE_APPEND);
-
 
         if ($this->request->getMethod() === 'POST') {
             $nuevoNombre = $this->request->getPost('nombre');
@@ -89,10 +87,14 @@ class usuario_controller extends Controller
             return redirect()->to('/administrar');
         }
 
+        $usuarios = $usuarioModel->findAll();
         $data['titulo'] = 'Editar Usuario';
+        $data['usuario'] = $usuario;
+        $data['usuarios'] = $usuarios;
+
         echo view('front/head_view', $data);
         echo view('front/navbar_view');
-        echo view('back/usuario/editar_usuario', ['usuario' => $usuario]);
+        echo view('back/usuario/editar_usuario', $data);
         echo view('front/footer_view');
     }
 }
