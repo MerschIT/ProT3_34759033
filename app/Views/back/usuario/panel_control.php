@@ -47,7 +47,16 @@
                             <td><?= esc($u['apellido']) ?></td>
                             <td><?= esc($u['usuario']) ?></td>
                             <td><?= esc($u['email']) ?></td>
-                            <td><?= esc($u['perfil_id']) ?></td>
+                            <td>
+                                <?php if ($u['perfil_id'] == 1): ?>
+                                    Administrador
+                                <?php elseif ($u['perfil_id'] == 2): ?>
+                                    Usuario
+                                <?php else: ?>
+                                    Otro
+                                <?php endif; ?>
+
+                            </td>
                             <td>
                                 <a href="<?= base_url('/borrar-usuario/' . $u['id_usuario']) ?>"
                                     class="btn btn-danger btn-sm"
